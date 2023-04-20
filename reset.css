@@ -1,0 +1,18 @@
+body{
+    background: blue;
+}
+.caixa{
+    background: rgb(48, 46, 46);
+}
+main{
+    background: aqua;
+}
+#entradaTexto{
+    background: rgb(194, 172, 172);
+}
+#saidaTexto{
+    background: gainsboro;
+}
+#botoes{
+    background: burlywood;
+}

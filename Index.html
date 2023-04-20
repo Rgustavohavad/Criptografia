@@ -1,0 +1,61 @@
+<! Doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        
+        
+        <title>Codificador</title>
+        
+    </head>
+    <body>
+        <header>
+            <div class="caixa">
+                <h1><img src="logo 2.png" alt=""></h1>
+            </div>
+        </header>
+        <main>
+            <div id="criptografar">
+               
+                <textarea id="entrada" cols="20" rows="10" placeholder="Entre com sua mensagem!"></textarea>
+                <p>Usar só letras maiusculas e sem acentos</p>
+            </div>
+            <div id="descriptografar">
+
+                <h2><img src="espera.png" id="espera"></h1></h2>
+
+            </div>
+            <div id="botoes">
+                <button onclick="criptografar()" id="bcriptografar">criptografar</button>
+                <button onclick="descriptografar()" id="bdescriptografar">descriptografar</button>
+                
+            </div>
+            
+        </main>
+        <script>
+            var texto = document.getElementById("entrada");
+
+               
+               function criptografar(){
+                   var entrada = texto.value;
+                   var cripto = entrada.replace(/e/g, "enter").replace(/i/g, "imes").replace(/a/g, "ai").replace(/o/g, "ober").replace(/u/g, "ufat");
+                   document.getElementById("descriptografar").innerHTML= '<textarea id="copiar" cols="50" rows="05">'+ cripto + '</textarea><br><button onclick="copiarTexto()" id="bcopia">copiar</button>';
+                }
+
+                function descriptografar(){
+                   var entrada = texto.value;
+                   var cripto = entrada.replace(/enter/g, "e").replace(/imes/g, "i").replace(/ai/g, "a").replace(/ober/g, "o").replace(/ufat/g, "u");
+                   document.getElementById("descriptografar").innerHTML= '<textarea id="copiar" cols="50" rows="05">'+ cripto + '</textarea><br><button onclick="copiarTexto()" id="bcopia">copiar</button>';
+                }
+
+                function copiarTexto() {
+                    var textoCopiado = document.getElementById("copiar");
+                    textoCopiado.select();
+                    document.execCommand("copy");
+                    alert("O texto é: " + textoCopiado.value);
+                }
+
+
+        </script>
+    </body>
+</html>
